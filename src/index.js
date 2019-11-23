@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {ApolloClient, gql, InMemoryCache} from 'apollo-boost';
@@ -13,9 +12,9 @@ const client = new ApolloClient({
   });
 
 const Main = () => (
-    <ApolloProvider client={client}>
-        <App/>
-        </ApolloProvider>
+  <ApolloProvider client={client}>
+    <App/>
+  </ApolloProvider>
 )
 
 ReactDOM.render(<Main />, document.getElementById('root'));

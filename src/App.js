@@ -1,6 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import logo from './logo.svg';
-import './App.css';
 import gql from 'graphql-tag';
 import { ApolloProvider, useQuery, useMutation } from '@apollo/react-hooks';
 import AddAnnotations from './AddAnnotations';
