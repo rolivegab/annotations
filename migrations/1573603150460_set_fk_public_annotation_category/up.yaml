@@ -1,0 +1,6 @@
+- args:
+    sql: "\n           alter table \"public\".\"annotation\"\n           add constraint
+      \"annotation_category_fkey\" \n           foreign key (\"category\") \n           references
+      \"public\".\"category\"\n           (\"id\") on update restrict on delete cascade;\n
+      \     "
+  type: run_sql

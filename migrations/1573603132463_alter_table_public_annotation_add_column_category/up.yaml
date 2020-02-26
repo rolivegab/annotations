@@ -1,0 +1,3 @@
+- args:
+    sql: ALTER TABLE "public"."annotation" ADD COLUMN "category" uuid NOT NULL;
+  type: run_sql

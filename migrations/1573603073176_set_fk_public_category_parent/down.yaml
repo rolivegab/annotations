@@ -1,0 +1,4 @@
+- args:
+    sql: "\n          alter table \"public\".\"category\" drop constraint \"category_parent_fkey\"\n
+      \     "
+  type: run_sql

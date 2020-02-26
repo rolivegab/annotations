@@ -21,7 +21,7 @@ class SeeAnnotations extends Component{
         return(
             <div>
                 <Query query={GET_ANNOTATIONS}>
-                        {({ loading, error, data }) => {
+                        {({ loading, error, data }: any) => {
                             if (loading) return <div>Fetching</div>
                             if (error) return <div>Error</div>
 
@@ -30,7 +30,7 @@ class SeeAnnotations extends Component{
                             
                             return (
                                 <div>
-                                        {annotationtoRender.map(i => (
+                                        {annotationtoRender.map((i: any) => (
                                     <p>
                                         {i.title}
                                         {i.content}

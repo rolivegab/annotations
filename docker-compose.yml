@@ -1,0 +1,25 @@
+version: '3.7'
+services:
+  postgres:
+    image: postgres:latest
+    environment: 
+      POSTGRES_USER: larissa
+      POSTGRES_PASSWORD: larissa123
+      POSTGRES_DB: larissa
+
+  api-graphql:
+    image: hasura/graphql-engine:latest
+    environment: 
+      HASURA_GRAPHQL_ENABLE_CONSOLE: 'false'
+      HASURA_GRAPHQL_DATABASE_URL: postgres://larissa:larissa123@postgres:5432/larissa
+    ports: 
+      - 3021:8080
+    depends_on: 
+      - postgres
+
+  graphiql:
+    image: npalm/graphiql
+    environment: 
+      API_URL: http://177.193.106.68:3021/v1/graphql
+    ports: 
+      - 3022:4000

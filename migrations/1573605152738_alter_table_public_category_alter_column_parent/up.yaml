@@ -1,0 +1,6 @@
+- args:
+    sql: COMMENT ON COLUMN "public"."category"."parent" IS E''
+  type: run_sql
+- args:
+    sql: alter table "public"."category" rename column "parent" to "parent_id";
+  type: run_sql

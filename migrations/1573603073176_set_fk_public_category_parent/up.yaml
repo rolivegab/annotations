@@ -1,0 +1,6 @@
+- args:
+    sql: "\n           alter table \"public\".\"category\"\n           add constraint
+      \"category_parent_fkey\" \n           foreign key (\"parent\") \n           references
+      \"public\".\"category\"\n           (\"id\") on update restrict on delete cascade;\n
+      \     "
+  type: run_sql

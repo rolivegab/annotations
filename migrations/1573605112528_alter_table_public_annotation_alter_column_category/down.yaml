@@ -1,0 +1,6 @@
+- args:
+    sql: COMMENT ON COLUMN "public"."annotation"."category" IS E'null'
+  type: run_sql
+- args:
+    sql: alter table "public"."annotation" rename column "category_id" to "category";
+  type: run_sql
